@@ -1215,26 +1215,35 @@ static void DexNavUpdateSearchWindow(u8 proximity, u8 searchLevel)
 static void CreateDexNavWildMon(u16 species, u8 potential, u8 level, u8 abilityNum, u16 item, u16 *moves)
 {
     struct Pokemon *mon = &gEnemyParty[0];
-    u8 iv[3] = {NUM_STATS};
+    u8 iv[6] = {NUM_STATS};
     u8 i;
     u8 perfectIv = 31;
 
     CreateWildMon(species, level);  // shiny rate bonus handled in CreateBoxMon
 
-    // Pick random, unique IVs to set to 31. The number of perfect IVs that are assigned is equal to the potential
+    // Pick random, unique IVs to set to 31. The number of perfect IVs that are assigned is dependent on the potential (1 potential gives 3 IVs, 2 potential gives 5, 3 potential gives 6)
     iv[0] = Random() % NUM_STATS;               // choose 1st perfect stat
     do {
         iv[1] = Random() % NUM_STATS;
         iv[2] = Random() % NUM_STATS;
+        iv[3] = Random() % NUM_STATS;
+        iv[4] = Random() % NUM_STATS;
+        iv[5] = Random() % NUM_STATS;
     } while ((iv[1] == iv[0])                   // unique 2nd perfect stat
-      || (iv[2] == iv[0] || iv[2] == iv[1]));   // unique 3rd perfect stat
+      || (iv[2] == iv[0] || iv[2] == iv[1])     // unique 3rd perfect stat
+      || (iv[3] == iv[0] || iv[3] == iv[1] || iv[3] == iv[2]) // unique 4th perfect stat
+      || (iv[4] == iv[0] || iv[4] == iv[1] || iv[4] == iv[2] || iv[4] == iv[3]) // unique 5th perfect stat
+      || (iv[5] == iv[0] || iv[5] == iv[1] || iv[5] == iv[2] || iv[5] == iv[3] || iv[5] == iv[4]));   // unique 6th perfect stat
 
-    if (potential > 2 && iv[2] != NUM_STATS)
-        SetMonData(mon, MON_DATA_HP_IV + iv[2], &perfectIv);
-    if (potential > 1 && iv[1] != NUM_STATS)
-        SetMonData(mon, MON_DATA_HP_IV + iv[1], &perfectIv);
-    if (potential > 0 && iv[0] != NUM_STATS)
+    if (potential > 2 && iv[5] != NUM_STATS)
+        SetMonData(mon, MON_DATA_HP_IV + iv[5], &perfectIv);
+    if (potential > 1 && iv[4] != NUM_STATS && iv[3] != NUM_STATS)
+        SetMonData(mon, MON_DATA_HP_IV + iv[4], &perfectIv);
+        SetMonData(mon, MON_DATA_HP_IV + iv[3], &perfectIv);
+    if (potential > 0 && iv[0] != NUM_STATS && iv[1] != NUM_STATS && iv[2] != NUM_STATS)
         SetMonData(mon, MON_DATA_HP_IV + iv[0], &perfectIv);
+        SetMonData(mon, MON_DATA_HP_IV + iv[1], &perfectIv);
+        SetMonData(mon, MON_DATA_HP_IV + iv[2], &perfectIv);
 
     //Set ability
     SetMonData(mon, MON_DATA_ABILITY_NUM, &abilityNum);

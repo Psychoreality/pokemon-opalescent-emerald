@@ -7021,6 +7021,11 @@ void HandleSetPokedexFlag(enum NationalDexOrder nationalNum, u8 caseId, u32 pers
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SPINDA)
             gSaveBlock2Ptr->pokedex.spindaPersonality = personality;
     }
+
+    if (caseId == FLAG_SET_SEEN)
+    {
+        TryIncrementSpeciesSearchLevel(nationalNum); //fixes dexnav search level
+    }
 }
 
 void HandleSetPokedexFlagFromMon(struct Pokemon *mon, u32 caseId)
