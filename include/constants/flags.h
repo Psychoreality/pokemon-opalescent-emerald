@@ -47,7 +47,7 @@
 #define FLAG_UNUSED_0x021    0x21 // dexnav
 #define FLAG_UNUSED_0x022    0x22 // dexnav
 #define FLAG_UNUSED_0x023    0x23 // dowsing
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_CHALLENGE_MODE_ENABLED    0x24 // Enables Challenge Mode (No EVs for Players, Harder Bosses)
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
