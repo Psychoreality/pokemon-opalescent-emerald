@@ -16,8 +16,8 @@ psychekit - Lead Designer, Mapper, Scripter and Balance Manager
 darthtoran - Designer and Balancer
 Rom Hacking Hideout - for the original pokeemerald-expansion codebase
 Team Aqua's Hideout - for all the incredible help resolving issues
-leob - ORAS inspired tileset
-Montblanc - SwSh style Summary Screen
+leob0505 - ORAS inspired tileset
+Montblanc - SwSh style Summary Screen, Message Box
 Other SwSh Summary Screen credits:
     RavePossum (BW summary screen)
     Vexx (auto-format code)
@@ -27,3 +27,4 @@ Other SwSh Summary Screen credits:
     Greenphx9 (pokefirered reference)
     Skeli (heart indicator graphic, based on Unbound)
     Zatsu (Tera type icons)
+PurrfectDoodle (FRLG font with Emerald spacing)
