@@ -1602,11 +1602,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Ice Beam"),
         .description = COMPOUND_STRING(
             "Blasts the foe with an icy\n"
-        #if B_USE_FROSTBITE == TRUE
-            "beam. May cause frostbite."),
-        #else
             "beam that may freeze it."),
-        #endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_ICE,
@@ -1618,7 +1614,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             // The following effect is also relevant in battle_Pike.c
             // If you cherry-pick this to use something other than the config, make sure to update it there too
-            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .moveEffect = MOVE_EFFECT_FREEZE,
             .chance = 10,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON : CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
@@ -18989,11 +18985,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Freezing Glare"),
         .description = COMPOUND_STRING(
             "Shoots psychic power from\n"
-        #if B_USE_FROSTBITE == TRUE
-            "the eyes. May frostbite."),
-        #else
             "the eyes. May freeze the foe."),
-        #endif
         .power = 90,
         .effect = EFFECT_HIT,
         .type = TYPE_PSYCHIC,
@@ -19004,7 +18996,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .moveEffect = MOVE_EFFECT_FREEZE,
             .chance = 10,
         }),
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,

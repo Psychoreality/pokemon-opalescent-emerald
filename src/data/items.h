@@ -11584,11 +11584,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Fires an icy cold\n"
             "beam that may\n"
-        #if B_USE_FROSTBITE == TRUE
-            "inflict frostbite."),
-        #else
             "freeze the foe."),
-        #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
