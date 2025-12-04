@@ -1280,6 +1280,20 @@ void PrepareStringBattle(enum StringID stringId, u32 battler)
             stringId = STRINGID_DEFENDERSSTATROSE;
         }
         break;
+    case STRINGID_PKMNCUTSSPATKWITH:
+        if (GetGenConfig(GEN_CONFIG_UPDATED_INTIMIDATE) >= GEN_8
+         && targetAbility == ABILITY_RATTLED
+         && CompareStat(gBattlerTarget, STAT_SPEED, MAX_STAT_STAGE, CMP_LESS_THAN, targetAbility))
+        {
+            gBattlerAbility = gBattlerTarget;
+            BattleScriptCall(BattleScript_AbilityRaisesDefenderStat);
+            SET_STATCHANGER(STAT_SPEED, 1, FALSE);
+        }
+        else if (targetAbility == ABILITY_CONTRARY)
+        {
+            stringId = STRINGID_DEFENDERSSTATROSE;
+        }
+        break;
     case STRINGID_ITDOESNTAFFECT:
     case STRINGID_PKMNUNAFFECTED:
         TryInitializeTrainerSlideEnemyMonUnaffected(gBattlerTarget);
@@ -1289,6 +1303,17 @@ void PrepareStringBattle(enum StringID stringId, u32 battler)
     }
 
     if ((stringId == STRINGID_PKMNCUTSATTACKWITH || stringId == STRINGID_DEFENDERSSTATFELL)
+     && ShouldDefiantCompetitiveActivate(gBattlerTarget, targetAbility))
+    {
+        gBattlerAbility = gBattlerTarget;
+        BattleScriptCall(BattleScript_AbilityRaisesDefenderStat);
+        if (targetAbility == ABILITY_DEFIANT)
+            SET_STATCHANGER(STAT_ATK, 2, FALSE);
+        else
+            SET_STATCHANGER(STAT_SPATK, 2, FALSE);
+    }
+
+    if ((stringId == STRINGID_PKMNCUTSSPATKWITH || stringId == STRINGID_DEFENDERSSTATFELL)
      && ShouldDefiantCompetitiveActivate(gBattlerTarget, targetAbility))
     {
         gBattlerAbility = gBattlerTarget;
@@ -4496,6 +4521,17 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                 }
             }
             break;
+        case ABILITY_NOBLE_AURA:
+            if (!gSpecialStatuses[battler].switchInAbilityDone && !IsOpposingSideEmpty(battler))
+            {
+                SaveBattlerAttacker(gBattlerAttacker);
+                gBattlerAttacker = battler;
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                SET_STATCHANGER(STAT_SPATK, 1, TRUE);
+                BattleScriptPushCursorAndCallback(BattleScript_IntimidateActivates);
+                effect++;
+            }
+            break;
         case ABILITY_COSTAR:
             if (!gSpecialStatuses[battler].switchInAbilityDone
              && IsDoubleBattle()
@@ -5362,6 +5398,21 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                 gBattleScripting.moveEffect = MOVE_EFFECT_POISON;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
                 BattleScriptCall(BattleScript_AbilityStatusEffect);
+                effect++;
+            }
+            break;
+        case ABILITY_SHREDDER:
+            if (IsBattlerAlive(gBattlerTarget)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && (GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS)
+             && IsMoveMakingContact(move, gBattlerAttacker)
+             && DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, move)
+             && (gDisableStructs[gBattlerTarget].substituteHP > 0))
+            {
+                gDisableStructs[gBattlerTarget].substituteHP = 0;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                BattleScriptPushCursor();
+                BattleScriptCall(BattleScript_ShredderActivates);
                 effect++;
             }
             break;

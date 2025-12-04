@@ -2409,4 +2409,39 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_NOBLE_AURA] =
+    {
+        .name = _("Noble Aura"),
+        .description = COMPOUND_STRING("Lowers the foe's Sp. Atk."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SHREDDER] =
+    {
+        .name = _("Shredder"),
+        .description = COMPOUND_STRING("Breaks substitutes on contact."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_SAVVY] =
+    {
+        .name = _("Savvy"),
+        .description = COMPOUND_STRING("KOs boost Sp. Atk stat."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_STAR_PUPIL] =
+    {
+        .name = _("Star Pupil"),
+        .description = COMPOUND_STRING("Ups Sp. Atk and locks move."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_GENERALIST] =
+    {
+        .name = _("Generalist"),
+        .description = COMPOUND_STRING("Boosts different type attacks."),
+        .aiRating = 6,
+    },
 };
