@@ -6709,7 +6709,7 @@ BattleScript_NobleAuraEffect:
 	copybyte sBATTLER, gBattlerAttacker
 	setstatchanger STAT_ATK, 1, TRUE
 	statbuffchange BS_TARGET, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_NobleAuraLoopIncrement
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_CHANGE, BattleScript_NobleAuraWontDecrease
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_CHANGE, BattleScript_IntimidateWontDecrease
 	printstring STRINGID_PKMNCUTSSPATKWITH
 BattleScript_NobleAuraEffect_WaitString:
 	waitmessage B_WAIT_TIME_LONG
@@ -8886,9 +8886,9 @@ BattleScript_NaturePowerAttackstring::
 	return
 
 BattleScript_ShredderActivates::
-	showabilitypopup BS_ATTACKER
 	pause B_WAIT_TIME_LONG
 	destroyabilitypopup
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE
 	printstring STRINGID_PKMNSUBSTITUTEFADED
 	return
+	

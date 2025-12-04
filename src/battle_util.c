@@ -5404,8 +5404,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
         case ABILITY_SHREDDER:
             if (IsBattlerAlive(gBattlerTarget)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && (GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS)
-             && IsMoveMakingContact(move, gBattlerAttacker)
+             && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
              && DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, move)
              && (gDisableStructs[gBattlerTarget].substituteHP > 0))
             {
