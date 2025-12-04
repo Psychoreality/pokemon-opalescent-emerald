@@ -8891,4 +8891,3 @@ BattleScript_ShredderActivates::
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE
 	printstring STRINGID_PKMNSUBSTITUTEFADED
 	return
-	
