@@ -8885,9 +8885,14 @@ BattleScript_NaturePowerAttackstring::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
-BattleScript_ShredderActivates::
+BattleScript_ShredderActivatesSub::
 	call BattleScript_AbilityPopUp
-	removescreens
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE
 	printstring STRINGID_PKMNSUBSTITUTEFADED
+	return
+
+BattleScript_ShredderActivatesScreens::
+	call BattleScript_AbilityPopUp
+	removescreens
+	printstring STRINGID_THEWALLSHATTERED
 	return

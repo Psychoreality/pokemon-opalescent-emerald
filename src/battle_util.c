@@ -5405,14 +5405,24 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
             if (IsBattlerAlive(gBattlerTarget)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
-             && DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, move)
-             && (gDisableStructs[gBattlerTarget].substituteHP > 0))
+             )
             {
-                gDisableStructs[gBattlerTarget].substituteHP = 0;
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                BattleScriptPushCursor();
-                BattleScriptCall(BattleScript_ShredderActivates);
-                effect++;
+                if (DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, move)
+                && (gDisableStructs[gBattlerTarget].substituteHP > 0))
+                    {  
+                        gDisableStructs[gBattlerTarget].substituteHP = 0;
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                        BattleScriptPushCursor();
+                        BattleScriptCall(BattleScript_ShredderActivatesSub);
+                        effect++;
+                }
+                if (TryRemoveScreens(gBattlerTarget))
+                        {
+                            PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                            BattleScriptPushCursor();
+                            BattleScriptCall(BattleScript_ShredderActivatesScreens);
+                            effect++;
+                        }
             }
             break;
         case ABILITY_TOXIC_CHAIN:
