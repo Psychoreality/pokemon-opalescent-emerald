@@ -2420,7 +2420,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SHREDDER] =
     {
         .name = _("Shredder"),
-        .description = COMPOUND_STRING("Breaks subs and screens on contact."),
+        .description = COMPOUND_STRING("Contact breaks subs/screens."),
         .aiRating = 5,
     },
 
