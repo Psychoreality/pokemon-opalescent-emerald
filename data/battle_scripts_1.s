@@ -8886,8 +8886,8 @@ BattleScript_NaturePowerAttackstring::
 	return
 
 BattleScript_ShredderActivates::
-	pause B_WAIT_TIME_LONG
-	destroyabilitypopup
+	call BattleScript_AbilityPopUp
+	removescreens
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE
 	printstring STRINGID_PKMNSUBSTITUTEFADED
 	return
