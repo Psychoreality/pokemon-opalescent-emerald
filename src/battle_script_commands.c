@@ -2885,7 +2885,7 @@ void StealTargetItem(u8 battlerStealer, u8 itemBattler)
     BtlController_EmitSetMonData(itemBattler, B_COMM_TO_CONTROLLER, REQUEST_HELDITEM_BATTLE, 0, sizeof(gBattleMons[itemBattler].item), &gBattleMons[itemBattler].item);  // remove target item
     MarkBattlerForControllerExec(itemBattler);
 
-    if (GetBattlerAbility(itemBattler) != ABILITY_GORILLA_TACTICS)
+    if (GetBattlerAbility(itemBattler) != ABILITY_GORILLA_TACTICS || GetBattlerAbility(itemBattler) != ABILITY_STAR_PUPIL)
         gBattleStruct->choicedMove[itemBattler] = MOVE_NONE;
 
     TrySaveExchangedItem(itemBattler, gLastUsedItem);
@@ -5681,6 +5681,7 @@ static bool32 HandleMoveEndAbilityBlock(u32 battlerAtk, u32 battlerDef, u32 move
     case ABILITY_GRIM_NEIGH:
     case ABILITY_AS_ONE_SHADOW_RIDER:
     case ABILITY_BEAST_BOOST:
+    case ABILITY_SAVVY:
         {
             if (!IsBattlerAlive(battlerAtk) || NoAliveMonsForEitherParty())
                 break;
@@ -5690,7 +5691,7 @@ static bool32 HandleMoveEndAbilityBlock(u32 battlerAtk, u32 battlerDef, u32 move
 
             if (abilityAtk == ABILITY_BEAST_BOOST)
                 stat = GetHighestStatId(battlerAtk);
-            else if (abilityAtk == ABILITY_GRIM_NEIGH || abilityAtk == ABILITY_AS_ONE_SHADOW_RIDER)
+            else if (abilityAtk == ABILITY_GRIM_NEIGH || abilityAtk == ABILITY_AS_ONE_SHADOW_RIDER || abilityAtk == ABILITY_SAVVY)
                 stat = STAT_SPATK;
 
             if (numMonsFainted && CompareStat(battlerAtk, stat, MAX_STAT_STAGE, CMP_LESS_THAN, abilityAtk))
@@ -5800,7 +5801,7 @@ static bool32 HandleMoveEndMoveBlock(u32 moveEffect)
             }
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
             gBattleMons[gBattlerTarget].item = 0;
-            if (gBattleMons[gBattlerTarget].ability != ABILITY_GORILLA_TACTICS)
+            if (gBattleMons[gBattlerTarget].ability != ABILITY_GORILLA_TACTICS || gBattleMons[gBattlerTarget].ability != ABILITY_STAR_PUPIL)
                 gBattleStruct->choicedMove[gBattlerTarget] = MOVE_NONE;
             CheckSetUnburden(gBattlerTarget);
 
@@ -12750,9 +12751,9 @@ static void Cmd_tryswapitems(void)
             BtlController_EmitSetMonData(gBattlerTarget, B_COMM_TO_CONTROLLER, REQUEST_HELDITEM_BATTLE, 0, sizeof(gBattleMons[gBattlerTarget].item), &gBattleMons[gBattlerTarget].item);
             MarkBattlerForControllerExec(gBattlerTarget);
 
-            if (GetBattlerAbility(gBattlerTarget) != ABILITY_GORILLA_TACTICS)
+            if (GetBattlerAbility(gBattlerTarget) != ABILITY_GORILLA_TACTICS || GetBattlerAbility(gBattlerTarget) != ABILITY_STAR_PUPIL)
                 gBattleStruct->choicedMove[gBattlerTarget] = MOVE_NONE;
-            if (GetBattlerAbility(gBattlerTarget) != ABILITY_GORILLA_TACTICS)
+            if (GetBattlerAbility(gBattlerTarget) != ABILITY_GORILLA_TACTICS || GetBattlerAbility(gBattlerTarget) != ABILITY_STAR_PUPIL)
                 gBattleStruct->choicedMove[gBattlerAttacker] = MOVE_NONE;
 
             gBattlescriptCurrInstr = cmd->nextInstr;
