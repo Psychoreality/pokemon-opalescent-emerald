@@ -2076,8 +2076,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PURIFYING_SALT] =
     {
-        .name = _("Purifying Salt"),
-        .description = COMPOUND_STRING("Protected by pure salts."),
+        .name = _("Rolling Stone"),
+        .description = COMPOUND_STRING("Protected from ailments."),
         .aiRating = 6,
         .breakable = TRUE,
     },

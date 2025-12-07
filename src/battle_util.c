@@ -7862,7 +7862,7 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
         }
         break;
     case ABILITY_PURIFYING_SALT:
-        if (moveType == TYPE_GHOST)
+        if (moveType == TYPE_GRASS)
         {
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
             if (ctx->updateFlags)
