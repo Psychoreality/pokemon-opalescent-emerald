@@ -2288,7 +2288,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_MYCELIUM_MIGHT] =
     {
-        .name = _("Mycelium Might"),
+        .name = _("Mycelial Might"),
         .description = COMPOUND_STRING("Status moves never fail."),
         .aiRating = 2,
     },
