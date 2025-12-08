@@ -4737,11 +4737,11 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Sheer Cold
 
-=== TRAINER_DRAKE ===
-Name: Drake
+=== TRAINER_ZINNIA ===
+Name: Zinnia
 Class: Elite Four
-Pic: Elite Four Drake
-Gender: Male
+Pic: Elite Four Zinnia
+Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No

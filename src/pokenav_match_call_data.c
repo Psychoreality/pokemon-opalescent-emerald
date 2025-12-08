@@ -558,8 +558,8 @@ static const struct MatchCallStructTrainer sDrakeMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REGISTERED_DRAKE,
-    .rematchTableIdx = REMATCH_DRAKE,
+    .flag = FLAG_REGISTERED_ZINNIA,
+    .rematchTableIdx = REMATCH_ZINNIA,
     .desc = gText_EliteFourMatchCallDesc,
     .name = NULL,
     .textData = sDrakeTextScripts

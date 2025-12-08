@@ -27,4 +27,6 @@ Other SwSh Summary Screen credits:
     Greenphx9 (pokefirered reference)
     Skeli (heart indicator graphic, based on Unbound)
     Zatsu (Tera type icons)
-PurrfectDoodle (FRLG font with Emerald spacing)
+PurrfectDoodle - FRLG font with Emerald spacing
+aveontrainer - Zinnia Overworld Sprite
+Gnomowladny - Zinnia battle sprite inspiration
