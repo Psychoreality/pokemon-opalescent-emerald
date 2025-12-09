@@ -3497,6 +3497,7 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 }
                 break;
             case ABILITY_FLASH_FIRE:
+            case ABILITY_PERMAFROST:
             case ABILITY_WELL_BAKED_BODY:
                 if (moveType == TYPE_FIRE)
                 {

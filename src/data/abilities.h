@@ -2444,4 +2444,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Boosts different type attacks."),
         .aiRating = 6,
     },
+
+    [ABILITY_PERMAFROST] =
+    {
+        .name = _("Permafrost"),
+        .description = COMPOUND_STRING("Speeds up if hit by fire."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
 };
