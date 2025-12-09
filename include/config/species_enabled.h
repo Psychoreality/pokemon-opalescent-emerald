@@ -493,7 +493,7 @@
 #define P_FAMILY_GOSSIFLEUR              FALSE
 #define P_FAMILY_WOOLOO                  FALSE
 #define P_FAMILY_CHEWTLE                 FALSE
-#define P_FAMILY_YAMPER                  P_GEN_8_POKEMON
+#define P_FAMILY_YAMPER                  TRUE
 #define P_FAMILY_ROLYCOLY                FALSE
 #define P_FAMILY_APPLIN                  FALSE
 #define P_FAMILY_SILICOBRA               P_GEN_8_POKEMON
