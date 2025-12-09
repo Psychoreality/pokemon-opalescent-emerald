@@ -23086,35 +23086,35 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //P_FAMILY_CHEWTLE
 
 #if P_FAMILY_YAMPER
-    const u32 gMonFrontPic_Yamper[] = INCBIN_U32("graphics/pokemon/yamper/front.4bpp.smol");
-    const u16 gMonPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper/normal.gbapal");
-    const u32 gMonBackPic_Yamper[] = INCBIN_U32("graphics/pokemon/yamper/back.4bpp.smol");
-    const u16 gMonShinyPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper/shiny.gbapal");
-    const u8 gMonIcon_Yamper[] = INCBIN_U8("graphics/pokemon/yamper/icon.4bpp");
+    const u32 gMonFrontPic_Yamper[] = INCBIN_U32("graphics/pokemon/yamper-ice/front.4bpp.smol");
+    const u16 gMonPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper-ice/normal.gbapal");
+    const u32 gMonBackPic_Yamper[] = INCBIN_U32("graphics/pokemon/yamper-ice/back.4bpp.smol");
+    const u16 gMonShinyPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper-ice/shiny.gbapal");
+    const u8 gMonIcon_Yamper[] = INCBIN_U8("graphics/pokemon/yamper-ice/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Yamper[] = INCBIN_U8("graphics/pokemon/yamper/footprint.1bpp");
+    const u8 gMonFootprint_Yamper[] = INCBIN_U8("graphics/pokemon/yamper-ice/footprint.1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_Yamper[] = INCBIN_COMP("graphics/pokemon/yamper/overworld.4bpp");
+    const u32 gObjectEventPic_Yamper[] = INCBIN_COMP("graphics/pokemon/yamper-ice/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
-    const u16 gOverworldPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper/overworld_normal.gbapal");
-    const u16 gShinyOverworldPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper/overworld_shiny.gbapal");
+    const u16 gOverworldPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper-ice/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Yamper[] = INCBIN_U16("graphics/pokemon/yamper-ice/overworld_shiny.gbapal");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
-    const u32 gMonFrontPic_Boltund[] = INCBIN_U32("graphics/pokemon/boltund/front.4bpp.smol");
-    const u16 gMonPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund/normal.gbapal");
-    const u32 gMonBackPic_Boltund[] = INCBIN_U32("graphics/pokemon/boltund/back.4bpp.smol");
-    const u16 gMonShinyPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund/shiny.gbapal");
-    const u8 gMonIcon_Boltund[] = INCBIN_U8("graphics/pokemon/boltund/icon.4bpp");
+    const u32 gMonFrontPic_Boltund[] = INCBIN_U32("graphics/pokemon/boltund-ice/front.4bpp.smol");
+    const u16 gMonPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund-ice/normal.gbapal");
+    const u32 gMonBackPic_Boltund[] = INCBIN_U32("graphics/pokemon/boltund-ice/back.4bpp.smol");
+    const u16 gMonShinyPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund-ice/shiny.gbapal");
+    const u8 gMonIcon_Boltund[] = INCBIN_U8("graphics/pokemon/boltund-ice/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Boltund[] = INCBIN_U8("graphics/pokemon/boltund/footprint.1bpp");
+    const u8 gMonFootprint_Boltund[] = INCBIN_U8("graphics/pokemon/boltund-ice/footprint.1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_Boltund[] = INCBIN_COMP("graphics/pokemon/boltund/overworld.4bpp");
+    const u32 gObjectEventPic_Boltund[] = INCBIN_COMP("graphics/pokemon/boltund-ice/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
-    const u16 gOverworldPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund/overworld_normal.gbapal");
-    const u16 gShinyOverworldPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund/overworld_shiny.gbapal");
+    const u16 gOverworldPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund-ice/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Boltund[] = INCBIN_U16("graphics/pokemon/boltund-ice/overworld_shiny.gbapal");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_YAMPER
