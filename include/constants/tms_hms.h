@@ -11,7 +11,7 @@
     F(HAIL) \
     F(BULK_UP) \
     F(BULLET_SEED) \
-    F(HIDDEN_POWER) \
+    F(DRAGON_DANCE) \
     F(SUNNY_DAY) \
     F(TAUNT) \
     F(ICE_BEAM) \
@@ -21,7 +21,7 @@
     F(PROTECT) \
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
-    F(SAFEGUARD) \
+    F(HEAL_BELL) \
     F(FRUSTRATION) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
@@ -42,16 +42,126 @@
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
-    F(TORMENT) \
+    F(PARTING_SHOT) \
     F(FACADE) \
-    F(SECRET_POWER) \
+    F(BOOMBURST) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
-    F(SKILL_SWAP) \
-    F(SNATCH) \
-    F(OVERHEAT)
+    F(FIRE_PUNCH) \
+    F(ICE_PUNCH) \
+    F(THUNDER_PUNCH) \
+    F(ROOST) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(LIQUIDATION) \
+    F(CEASELESS_EDGE) \
+    F(STONE_AXE) \
+    F(ECHOED_VOICE) \
+    F(DRAGON_PULSE) \
+    F(DRAIN_PUNCH) \
+    F(WILL_O_WISP) \
+    F(SILVER_WIND) \
+    F(DAZZLING_GLEAM) \
+    F(EXPLOSION) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(FOUL_PLAY) \
+    F(GIGA_IMPACT) \
+    F(ROCK_POLISH) \
+    F(DEFOG) \
+    F(STONE_EDGE) \
+    F(AVALANCHE) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(STEALTH_ROCK) \
+    F(NASTY_PLOT) \
+    F(HYPER_VOICE) \
+    F(DARK_PULSE) \
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(SLEEP_TALK) \
+    F(NATURAL_GIFT) \
+    F(POISON_JAB) \
+    F(STRENGTH_SAP) \
+    F(GRASS_KNOT) \
+    F(SWAGGER) \
+    F(VOLT_SWITCH) \
+    F(U_TURN) \
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(TRICK_ROOM) \
+    F(WILD_CHARGE) \
+    F(POWER_UP_PUNCH) \
+    F(SNARL) \
+    F(MOONBLAST) \
+    F(DRAGON_TAIL) \
+    F(PSYCHIC_FANGS) \
+    F(POWER_WHIP) \
+    F(BODY_PRESS) \
+    F(BRUTAL_SWING) \
+    F(BODY_SLAM) \
+    F(HYDRO_PUMP) \
+    F(GRASSY_TERRAIN) \
+    F(MISTY_TERRAIN) \
+    F(ELECTRIC_TERRAIN) \
+    F(PSYCHIC_TERRAIN) \
+    F(MYSTICAL_FIRE) \
+    F(STOMPING_TANTRUM) \
+    F(CROSS_POISON) \
+    F(SHED_TAIL) \
+    F(VENOSHOCK) \
+    F(HEX) \
+    F(LEECH_LIFE) \
+    F(SPIKES) \
+    F(OUTRAGE) \
+    F(TRICK) \
+    F(HEAT_WAVE) \
+    F(LEAF_BLADE) \
+    F(TOXIC_SPIKES) \
+    F(AURA_SPHERE) \
+    F(GUNK_SHOT) \
+    F(SEED_BOMB) \
+    F(ZEN_HEADBUTT) \
+    F(SLUDGE_WAVE) \
+    F(HEAVY_SLAM) \
+    F(SCALD) \
+    F(PLAY_ROUGH) \
+    F(THROAT_CHOP) \
+    F(RAPID_SPIN) \
+    F(HEAT_CRASH) \
+    F(IRON_DEFENSE) \
+    F(BATON_PASS) \
+    F(ENCORE) \
+    F(AMNESIA) \
+    F(METEOR_MASH) \
+    F(HIGH_HORSEPOWER) \
+    F(AURORA_VEIL) \
+    F(TELEPORT) \
+    F(RECOVER) \
+    F(LEECH_SEED) \
+    F(SUCKER_PUNCH) \
+    F(FLIP_TURN) \
+    F(CRUSH_CLAW) \
+    F(NOBLE_ROAR) \
+    F(QUIVER_DANCE) \
+    F(VICTORY_DANCE) \
+    F(PIN_MISSILE) \
+    F(ARM_THRUST) \
+    F(ICICLE_SPEAR) \
+    F(DRAINING_KISS) \
+    F(PARABOLIC_CHARGE) \
+    F(COURT_CHANGE) \
+    F(CLEAR_SMOG) \
+    F(SIMPLE_BEAM) \
+    F(GRASSY_GLIDE) \
+    F(MISTY_EXPLOSION) \
+    F(EXPANDING_FORCE) \
+    F(RISING_VOLTAGE) \
+    F(STEEL_ROLLER) \
 
 #define FOREACH_HM(F) \
     F(CUT) \

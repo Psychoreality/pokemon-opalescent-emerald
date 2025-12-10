@@ -1021,7 +1021,70 @@
 #define ITEM_DRAMPANITE 853
 #define ITEM_FALINKSITE 854
 
-#define ITEMS_COUNT 855
+//Custom Items
+
+#define ITEM_TM101 855
+#define ITEM_TM102 856
+#define ITEM_TM103 857
+#define ITEM_TM104 858
+#define ITEM_TM105 859
+#define ITEM_TM106 860
+#define ITEM_TM107 861
+#define ITEM_TM108 862
+#define ITEM_TM109 863
+#define ITEM_TM110 864
+#define ITEM_TM111 865
+#define ITEM_TM112 866
+#define ITEM_TM113 867
+#define ITEM_TM114 868
+#define ITEM_TM115 869
+#define ITEM_TM116 870
+#define ITEM_TM117 871
+#define ITEM_TM118 872
+#define ITEM_TM119 873
+#define ITEM_TM120 874
+#define ITEM_TM121 875
+#define ITEM_TM122 876
+#define ITEM_TM123 877
+#define ITEM_TM124 878
+#define ITEM_TM125 879
+#define ITEM_TM126 880
+#define ITEM_TM127 881
+#define ITEM_TM128 882
+#define ITEM_TM129 883
+#define ITEM_TM130 884
+#define ITEM_TM131 885
+#define ITEM_TM132 886
+#define ITEM_TM133 887
+#define ITEM_TM134 888
+#define ITEM_TM135 889
+#define ITEM_TM136 890
+#define ITEM_TM137 891
+#define ITEM_TM138 892
+#define ITEM_TM139 893
+#define ITEM_TM140 894
+#define ITEM_TM141 895
+#define ITEM_TM142 896
+#define ITEM_TM143 897
+#define ITEM_TM144 898
+#define ITEM_TM145 899
+#define ITEM_TM146 900
+#define ITEM_TM147 901
+#define ITEM_TM148 902
+#define ITEM_TM149 903
+#define ITEM_TM150 904
+#define ITEM_TM151 905
+#define ITEM_TM152 906
+#define ITEM_TM153 907
+#define ITEM_TM154 908
+#define ITEM_TM155 909
+#define ITEM_TM156 910
+#define ITEM_TM157 911
+#define ITEM_TM158 912
+#define ITEM_TM159 913
+#define ITEM_TM160 914
+
+#define ITEMS_COUNT 915
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

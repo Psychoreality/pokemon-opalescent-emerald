@@ -76,7 +76,7 @@
 #define AI_TERA_PREDICT_CHANCE                                  40 // Chance for AI with smart tera flag to tera in the situation where tera would save it from a KO, but could be punished by a KO from a different move.
 
 // AI_FLAG_PP_STALL_PREVENTION settings
-#define PP_STALL_DISREGARD_MOVE_PERCENTAGE                      50 // Detection chance per roll
+#define PP_STALL_DISREGARD_MOVE_PERCENTAGE                      100 // Detection chance per roll
 #define PP_STALL_SCORE_REDUCTION                                20 // Score reduction if any roll for PP stall detection passes
 
 // AI_FLAG_ASSUME_STAB settings
@@ -91,7 +91,7 @@
 #define ASSUME_ALL_STATUS_ODDS                          25 // Chance for the AI to see any kind of status move.
 
 // AI_FLAG_SMART_SWITCHING settings
-#define SMART_SWITCHING_OMNISCIENT                              FALSE // AI will use omniscience for switching calcs, regardless of omniscience setting otherwise
+#define SMART_SWITCHING_OMNISCIENT                              TRUE // AI will use omniscience for switching calcs, regardless of omniscience setting otherwise
 
 // Configurations specifically for AI_FLAG_DOUBLE_BATTLE.
 #define FRIENDLY_FIRE_RISKY_THRESHOLD             2 // AI_FLAG_RISKY acceptable number of hits to KO the partner via friendly fire
