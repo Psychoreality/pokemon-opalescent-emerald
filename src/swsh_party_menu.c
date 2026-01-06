@@ -152,6 +152,7 @@ enum {
 };
 
 #define TAG_HELD_ITEM 55120
+#define TAG_SELECT_CURSOR 55121
 
 #define PARTY_PAL_SELECTED     (1 << 0)
 #define PARTY_PAL_FAINTED      (1 << 1)
@@ -236,6 +237,7 @@ static EWRAM_DATA u16 sPartyMenuItemId = 0;
 EWRAM_DATA u8 gBattlePartyCurrentOrder[PARTY_SIZE / 2] = {0}; // bits 0-3 are the current pos of Slot 1, 4-7 are Slot 2, and so on
 static EWRAM_DATA u8 sInitialLevel = 0;
 static EWRAM_DATA u8 sFinalLevel = 0;
+static EWRAM_DATA u8 sSelectCursorSpriteId = 0;
 
 // IWRAM common
 COMMON_DATA void (*gItemUseCB)(u8, TaskFunc) = NULL;
@@ -298,6 +300,9 @@ static void CreatePartyMonHeldItemSprite(struct Pokemon *, struct PartyMenuBox *
 static void CreatePartyMonPokeballSprite(struct Pokemon *, struct PartyMenuBox *);
 static void CreatePartyMonIconSprite(struct Pokemon *, struct PartyMenuBox *, u32);
 static void CreatePartyMonStatusSprite(struct Pokemon *, struct PartyMenuBox *);
+static void LoadPartyMonSelectCursor(void);
+static void CreatePartyMonSelectSprite(struct PartyMenuBox *, u8);
+static void DestroyPartyMonSelectSprite(void);
 static u8 CreateSmallPokeballButtonSprite(u8, u8);
 static void DrawCancelConfirmButtons(void);
 static u8 CreatePokeballButtonSprite(u8, u8);
@@ -671,53 +676,57 @@ static bool8 ShowPartyMenu(void)
         gMain.state++;
         break;
     case 12:
-        LoadPartyMenuPokeballGfx();
+        LoadPartyMonSelectCursor();
         gMain.state++;
         break;
     case 13:
-        LoadPartyMenuAilmentGfx();
+        LoadPartyMenuPokeballGfx();
         gMain.state++;
         break;
     case 14:
-        LoadMonIconPalettes();
+        LoadPartyMenuAilmentGfx();
         gMain.state++;
         break;
     case 15:
+        LoadMonIconPalettes();
+        gMain.state++;
+        break;
+    case 16:
         if (CreatePartyMonSpritesLoop())
         {
             sPartyMenuInternal->data[0] = 0;
             gMain.state++;
         }
         break;
-    case 16:
+    case 17:
         if (RenderPartyMenuBoxes())
         {
             sPartyMenuInternal->data[0] = 0;
             gMain.state++;
         }
         break;
-    case 17:
+    case 18:
         CreateCancelConfirmPokeballSprites();
         gMain.state++;
         break;
-    case 18:
+    case 19:
         CreateCancelConfirmWindows(sPartyMenuInternal->chooseHalf);
         gMain.state++;
         break;
-    case 19:
+    case 20:
         gMain.state++;
         break;
-    case 20:
+    case 21:
         CreateTask(sPartyMenuInternal->task, 0);
         DisplayPartyMenuStdMessage(sPartyMenuInternal->messageId);
         gMain.state++;
         break;
-    case 21:
+    case 22:
         BlendPalettes(PALETTES_ALL, 16, 0);
         gPaletteFade.bufferTransferDisabled = FALSE;
         gMain.state++;
         break;
-    case 22:
+    case 23:
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
         gMain.state++;
         break;
@@ -777,11 +786,11 @@ static bool8 ReloadPartyMenu(void)
         gMain.state++;
         break;
     case 10:
-        LoadPartyMenuPokeballGfx();
+        LoadPartyMonSelectCursor();
         gMain.state++;
         break;
     case 11:
-        LoadPartyMenuAilmentGfx();
+        LoadPartyMenuPokeballGfx();
         gMain.state++;
         break;
     case 12:
@@ -789,33 +798,37 @@ static bool8 ReloadPartyMenu(void)
         gMain.state++;
         break;
     case 13:
+        LoadMonIconPalettes();
+        gMain.state++;
+        break;
+    case 14:
         if (CreatePartyMonSpritesLoop())
         {
             sPartyMenuInternal->data[0] = 0;
             gMain.state++;
         }
         break;
-    case 14:
+    case 15:
         if (RenderPartyMenuBoxes())
         {
             sPartyMenuInternal->data[0] = 0;
             gMain.state++;
         }
         break;
-    case 15:
+    case 16:
         CreateCancelConfirmPokeballSprites();
         gMain.state++;
         break;
-    case 16:
+    case 17:
         CreateCancelConfirmWindows(sPartyMenuInternal->chooseHalf);
         gMain.state++;
         break;
-    case 17:
+    case 18:
         BlendPalettes(PALETTES_ALL, 16, RGB_WHITEALPHA);
         gPaletteFade.bufferTransferDisabled = FALSE;
         gMain.state++;
         break;
-    case 18:
+    case 19:
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_WHITEALPHA);
         gMain.state++;
         break;
@@ -1281,6 +1294,7 @@ static void CreateCancelConfirmPokeballSprites(void)
             sPartyMenuInternal->spriteIdCancelPokeball = CreatePokeballButtonSprite(198, 148);
         }
         AnimatePartySlot(gPartyMenu.slotId, 1);
+        CreatePartyMonSelectSprite(&sPartyMenuBoxes[gPartyMenu.slotId], gPartyMenu.slotId);
     }
 }
 
@@ -1747,6 +1761,7 @@ static void UpdateCurrentPartySelection(s8 *slotPtr, s8 movementDir)
         PlaySE(SE_SELECT);
         AnimatePartySlot(newSlotId, 0);
         AnimatePartySlot(*slotPtr, 1);
+        CreatePartyMonSelectSprite(&sPartyMenuBoxes[*slotPtr], *slotPtr);
     }
 }
 
@@ -4444,6 +4459,35 @@ void LoadHeldItemIcons(void)
 {
     LoadSpriteSheet(&gSpriteSheet_HeldItem);
     LoadSpritePalette(&sSpritePalette_HeldItem);
+}
+
+static void LoadPartyMonSelectCursor(void)
+{
+    LoadSpriteSheet(&sSpriteSheet_SelectCursor);
+}
+
+static void DestroyPartyMonSelectSprite(void)
+{
+    if (sSelectCursorSpriteId != MAX_SPRITES && sSelectCursorSpriteId != 0)
+    {
+        DestroySprite(&gSprites[sSelectCursorSpriteId]);
+        sSelectCursorSpriteId = MAX_SPRITES;
+    }
+}
+
+static void CreatePartyMonSelectSprite(struct PartyMenuBox *menuBox, u8 slot)
+{
+    DestroyPartyMonSelectSprite();
+    
+    u8 x = menuBox->spriteCoords[0] - 16;
+    u8 y = menuBox->spriteCoords[1] + 4;
+    
+    sSelectCursorSpriteId = CreateSprite(&sSpriteTemplate_SelectCursor, x, y, 0);
+    
+    if (sSelectCursorSpriteId != MAX_SPRITES)
+    {
+        gSprites[sSelectCursorSpriteId].oam.priority = 0; // Draw above mon sprite
+    }
 }
 
 void DrawHeldItemIconsForTrade(u8 *partyCounts, u8 *partySpriteIds, u8 whichParty)
