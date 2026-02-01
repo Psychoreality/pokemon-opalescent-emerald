@@ -1288,8 +1288,8 @@ static const struct OamData sOamData_HoverCursor =
 
 static const struct CompressedSpriteSheet sSpriteSheet_HoverCursor =
 {
-    .data = sHoverCursorGfx, 
-    .size = (16 * 16) / 2, 
+    .data = sHoverCursorGfx,
+    .size = (16 * 16) / 2,
     .tag = TAG_HOVER_CURSOR
 };
 
