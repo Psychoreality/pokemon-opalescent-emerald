@@ -23,7 +23,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ULTRA_BALL",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_VOLT_SWITCH",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL"
     },
@@ -49,7 +49,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_THUNDER_STONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_RISING_VOLTAGE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_NEW_MAUVILLE_THUNDER_STONE"
     },
@@ -117,6 +117,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewMauville_Inside_EventScript_Voltorb3",
       "flag": "FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_CHOICE_SCARF",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_UNUSED_0x495"
     }
   ],
   "warp_events": [

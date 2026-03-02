@@ -6751,8 +6751,8 @@ void SetWildMonHeldItem(void)
         u16 count = (WILD_DOUBLE_BATTLE) ? 2 : 1;
         u16 i;
         bool32 itemHeldBoost = CanFirstMonBoostHeldItemRarity();
-        u16 chanceNoItem = itemHeldBoost ? 20 : 45;
-        u16 chanceNotRare = itemHeldBoost ? 80 : 95;
+        u16 chanceNoItem = itemHeldBoost ? 0 : 0;
+        u16 chanceNotRare = itemHeldBoost ? 50 : 80;
 
         for (i = 0; i < count; i++)
         {

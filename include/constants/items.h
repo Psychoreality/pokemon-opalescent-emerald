@@ -1084,7 +1084,9 @@
 #define ITEM_TM159 913
 #define ITEM_TM160 914
 
-#define ITEMS_COUNT 915
+#define ITEM_INFINITE_REPEL 915
+
+#define ITEMS_COUNT 916
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

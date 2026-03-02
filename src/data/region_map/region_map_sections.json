@@ -89,6 +89,14 @@
       "height": 2
     },
     {
+      "id": "MAPSEC_RUSTBORO_ALLEY",
+      "name": "Rustboro Alley",
+      "x": 0,
+      "y": 5,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "MAPSEC_FORTREE_CITY",
       "name": "Fortree City",
       "x": 12,
