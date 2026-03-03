@@ -27,7 +27,7 @@ is_trainer_skip = re.compile(r'(const struct Trainer gTrainers\[\] = \{)|(^    \
 
 trainer_normal_definition          = re.compile(r'    \[DIFFICULTY_NORMAL\]\[(TRAINER_\w+)\] =')
 trainer_easy_definition            = re.compile(r'    \[DIFFICULTY_EASY\]\[(TRAINER_\w+)\] =')
-trainer_hard_definition            = re.compile(r'    \[DIFFICULTY_HARD\]\[(TRAINER_\w+)\] =')
+trainer_hard_definition            = re.compile(r'    \[DIFFICULTY_CHALLENGE\]\[(TRAINER_\w+)\] =')
 end_pokemon_definition             = re.compile(r'            },')
 trainer_class_definition           = re.compile(r'\.trainerClass = TRAINER_CLASS_(\w+)')
 encounter_music_gender_definition  = re.compile(r'\.encounterMusic_gender = (F_TRAINER_FEMALE \| )?TRAINER_ENCOUNTER_MUSIC_(\w+)')
@@ -285,7 +285,7 @@ def parse_trainers(content, output):
                 party = []
                 [id_] = m.groups()
                 trainer = Trainer(id_)
-                trainer.difficulty = "Hard"
+                trainer.difficulty = "Challenge"
                 trainer.gender = 'Male'
             elif m := trainer_class_definition.search(line):
                 [class_] = m.groups()

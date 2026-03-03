@@ -325,6 +325,7 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
    HOENN_TO_NATIONAL(TEDDIURSA),
    HOENN_TO_NATIONAL(URSARING),
    HOENN_TO_NATIONAL(URSALUNA),
+   HOENN_TO_NATIONAL(URSACLIPSE),
    HOENN_TO_NATIONAL(SLUGMA),
    HOENN_TO_NATIONAL(MAGCARGO),
    HOENN_TO_NATIONAL(SWINUB),
@@ -4194,7 +4195,7 @@ const u32 sExpCandyExperienceTable[] = {
     [EXP_800 - 1] = 800,
     [EXP_3000 - 1] = 3000,
     [EXP_10000 - 1] = 10000,
-    [EXP_30000 - 1] = 30000,
+    [EXP_30000 - 1] = 1250000,
 };
 
 // Returns TRUE if the item has no effect on the Pokémon, FALSE otherwise

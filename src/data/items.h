@@ -2095,12 +2095,12 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Exp. Candy XL"),
         .pluralName = ITEM_PLURAL_NAME("Exp. Candies XL"),
-        .price = 10000,
+        .price = 5,
         .holdEffectParam = EXP_30000,
         .description = COMPOUND_STRING(
-            "Gives a very large\n"
-            "amount of Exp. to\n"
-            "a single Pokémon."),
+            "Raises a single\n"
+            "Pokémon to the\n"
+            "current level cap."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15715,7 +15715,7 @@ const struct Item gItemsInfo[] =
     },
     [ITEM_INFINITE_REPEL] =
     {
-        .name = _("Infinite Repel"),
+        .name = ITEM_NAME("Infinite Repel"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Repels all wild\n"

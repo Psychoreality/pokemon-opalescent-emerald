@@ -6084,8 +6084,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sUrsaringLevelUpLearnset,
         .teachableLearnset = sUrsaringTeachableLearnset,
     #if P_GEN_8_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_PEAT_BLOCK, SPECIES_URSALUNA, CONDITIONS({IF_REGION, REGION_HISUI}, {IF_TIME, TIME_NIGHT})},
-                                {EVO_NONE, 0, SPECIES_URSALUNA_BLOODMOON}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_PEAT_BLOCK, SPECIES_URSALUNA},
+                                {EVO_ITEM, ITEM_REAPER_CLOTH, SPECIES_URSALUNA_BLOODMOON}),
     #endif
     },
 
@@ -6150,7 +6150,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sUrsalunaLevelUpLearnset,
         .teachableLearnset = sUrsalunaTeachableLearnset,
-        .formSpeciesIdTable = sUrsalunaFormSpeciesIdTable,
     },
 
     [SPECIES_URSALUNA_BLOODMOON] =
@@ -6161,7 +6160,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 52,
         .baseSpAttack  = 135,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_GROUND, TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 5,
         .expYield = 275,
         .evYield_SpAttack = 3,
@@ -6172,9 +6171,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_MINDS_EYE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Ursaluna"),
+        .speciesName = _("Ursaclipse"),
         .cryId = CRY_URSALUNA,
-        .natDexNum = NATIONAL_DEX_URSALUNA,
+        .natDexNum = NATIONAL_DEX_URSACLIPSE,
         .categoryName = _("Peat"),
         .height = 27,
         .weight = 3330,
@@ -6205,7 +6204,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         FOOTPRINT(Ursaluna)
         .levelUpLearnset = sUrsalunaBloodmoonLevelUpLearnset,
         .teachableLearnset = sUrsalunaBloodmoonTeachableLearnset,
-        .formSpeciesIdTable = sUrsalunaFormSpeciesIdTable,
     },
 #endif //P_GEN_8_CROSS_EVOS
 #endif //P_FAMILY_TEDDIURSA

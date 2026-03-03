@@ -1625,8 +1625,8 @@ void ItemUseOutOfBattle_InfiniteRepel(u8 taskId)
     {
         FlagToggle(OW_FLAG_NO_ENCOUNTER);
         PlaySE(SE_REPEL);
-        if gtasks[taskId].tUsingRegisteredKeyItem{
-            DisplayItemMessageOnField(taskId, gText_InfiniteRepelOn. Task_CloseCantUseKeyItemMessage);
+        if (gTasks[taskId].tUsingRegisteredKeyItem){
+            DisplayItemMessageOnField(taskId, gText_InfiniteRepelOn, Task_CloseCantUseKeyItemMessage);
         }
         else{
             DisplayItemMessage(taskId, 1, gText_InfiniteRepelOn, CloseItemMessage);
