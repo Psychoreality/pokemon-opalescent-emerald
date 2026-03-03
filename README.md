@@ -11,6 +11,8 @@ Featuring:
     - Over 150 TMs, a mix of the most broken yet fair versions of gameplay mechanics, and solid lists of egg and tutor moves
     - All balancing information available on your in-game Pokedex, or via online dex
 
+Based off RHH's Pokeemerald-Expansion 1.14.2 https://github.com/rh-hideout/pokeemerald-expansion/
+
 Credits:
 psychekit - Lead Designer, Mapper, Scripter and Balance Manager
 darthtoran - Designer and Balancer
