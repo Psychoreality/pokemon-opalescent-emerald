@@ -539,6 +539,9 @@ SlateportCity_EventScript_PowerTMClerk::
 SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_TM_CEASELESS_EDGE
 	.2byte ITEM_TM_STONE_AXE
+	.2byte ITEM_TM_STRENGTH_SAP
+	.2byte ITEM_TM_PSYCHIC_FANGS
+	.2byte ITEM_TM_POWER_UP_PUNCH
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine

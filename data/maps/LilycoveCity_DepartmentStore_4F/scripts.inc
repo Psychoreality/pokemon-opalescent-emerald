@@ -29,6 +29,10 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_THUNDER
 	.2byte ITEM_TM_BLIZZARD
 	.2byte ITEM_TM_HYPER_BEAM
+	.2byte ITEM_TM_GIGA_IMPACT
+	.2byte ITEM_TM_ROCK_SLIDE
+	.2byte ITEM_TM_MOONBLAST
+	.2byte ITEM_TM_GUNK_SHOT
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
@@ -47,6 +51,10 @@ LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
 	.2byte ITEM_TM_AURORA_VEIL
 	.2byte ITEM_TM_REFLECT
 	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_RECOVER
+	.2byte ITEM_TM_TRICK
+	.2byte ITEM_TM_QUIVER_DANCE
+	.2byte ITEM_TM_VICTORY_DANCE
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
