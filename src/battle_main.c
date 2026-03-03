@@ -341,7 +341,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_WINSTRATE] = { _("Winstrate"), 10 },
     [TRAINER_CLASS_POKEFAN] = { _("Pokéfan"), 20, BALL_DREAM },
     [TRAINER_CLASS_YOUNGSTER] = { _("Youngster"), 4 },
-    [TRAINER_CLASS_CHAMPION] = { _("Champion"), 50, BALL_ULTRA, BALL_ULTRA },
+    [TRAINER_CLASS_CHAMPION] = { _("Champion"), 50, BALL_ULTRA },
     [TRAINER_CLASS_FISHERMAN] = { _("Fisherman"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_DIVE : BALL_LURE },
     [TRAINER_CLASS_TRIATHLETE] = { _("Triathlete"), 10, BALL_QUICK },
     [TRAINER_CLASS_DRAGON_TAMER] = { _("Dragon Tamer"), 12 },

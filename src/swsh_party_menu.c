@@ -6094,8 +6094,7 @@ static void SpriteCB_PartyMonPokemon(struct Sprite *sprite)
     if (!gPaletteFade.active && sprite->sDelayAnim != 1)
     {
         sprite->sDontFlip = TRUE;
-        PokemonSummaryDoMonAnimation(sprite, sprite->sSpecies, sprite->sIsEgg);
-        // PokemonSummaryDoMonAnimation(sprite, sprite->sSpecies, sprite->sIsEgg, sprite->sIsShadow); // use this if already using swsh_summary_screen branch
+        PokemonSummaryDoMonAnimation(sprite, sprite->sSpecies, sprite->sIsEgg, sprite->sIsShadow); // use this if already using swsh_summary_screen branch
     }
 }
 
