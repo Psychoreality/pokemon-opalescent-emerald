@@ -7,8 +7,8 @@ Featuring:
     - Over 550 Pokemon, all given a complete balance overhaul to intentionally break everything
     - Completely new route layouts to remix the zones you're bored of navigating and added maps to house new story content
     - A chaotic experience tailored for casual fans and challenge runners alike
-    - A fresh, vibrant ORAS-inspired color scheme
-    - Over 150 TMs, a mix of the most broken yet fair versions of gameplay mechanics, and solid lists of egg and tutor moves
+    - A fresh, vibrant ORAS-inspired color scheme and updated UI
+    - Over 150 TMs, a mix of the most broken yet fair versions of gameplay mechanics, and solid lists of egg and tutor moves available via a buffed Dexnav
     - All balancing information available on your in-game Pokedex, or via online dex
 
 Based off RHH's Pokeemerald-Expansion 1.14.2 https://github.com/rh-hideout/pokeemerald-expansion/
@@ -19,7 +19,7 @@ darthtoran - Designer and Balancer
 Rom Hacking Hideout - for the original pokeemerald-expansion codebase
 Team Aqua's Hideout - for all the incredible help resolving issues
 leob0505 - ORAS inspired tileset
-Montblanc - SwSh style Summary Screen, Message Box
+Montblanc - SwSh style Summary Screen, Message Box, Party Menu
 Other SwSh Summary Screen credits:
     RavePossum (BW summary screen)
     Vexx (auto-format code)

@@ -11507,9 +11507,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ROCK_WRECKER] =
     {
         .name = COMPOUND_STRING("Rock Wrecker"),
-        .description = sHyperBeamDescription,
+        .description = COMPOUND_STRING(
+            "Throws boulders at the\n"
+            "foe. Lowers own Attack."),
         .effect = EFFECT_HIT,
-        .power = 150,
+        .power = 130,
         .type = TYPE_ROCK,
         .accuracy = 90,
         .pp = 5,
@@ -11518,10 +11520,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .ballisticMove = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
+            .moveEffect = MOVE_EFFECT_ATK_MINUS_2,
             .self = TRUE,
         }),
-        .contestEffect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
