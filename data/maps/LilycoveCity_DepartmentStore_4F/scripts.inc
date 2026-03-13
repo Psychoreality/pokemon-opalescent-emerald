@@ -67,7 +67,7 @@ LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
 LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
 	.string "There are so many different kinds of\n"
 	.string "TM moves.\p"
-	.string "A catalog I read said there are fifty\n"
+	.string "A catalog I read said there are 160\n"
 	.string "different kinds.$"
 
 LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:

@@ -39,8 +39,8 @@ EverGrandeCity_PokemonLeague_1F_Pokemart:
 	.2byte ITEM_MAX_POTION
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REVIVE
-	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_MAX_REVIVE
+	.2byte ITEM_XP_CANDY_XL
 	pokemartlistend
 
 @ The door guards only check for FLAG_BADGE06_GET because Winonas badge is the only one that can be skipped
@@ -54,7 +54,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	message EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges
 	waitmessage
 	delay 120
-	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
+	goto_if_unset FLAG_BADGE05_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
 	closemessage
 	applymovement LOCALID_LEAGUE_GUARD_1, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_LEAGUE_GUARD_2, EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay

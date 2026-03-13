@@ -497,6 +497,14 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_FROZEN_BREACH",
+      "name": "Frozen Breach",
+      "x": 2,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_ABANDONED_SHIP",
       "name": "Abandoned Ship",
       "x": 6,

@@ -16391,7 +16391,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Chops the throat to disable\n"
             "sound moves for 2 turns."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 90,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
@@ -19858,7 +19858,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .metronomeBanned = TRUE, // Only since it isn't implemented yet
         .battleAnimScript = gBattleAnimMove_LastRespects,
     },

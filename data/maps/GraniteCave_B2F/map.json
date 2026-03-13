@@ -23,7 +23,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_REPEL",
+      "trainer_sight_or_berry_tree_id": "ITEM_BOTTLE_CAP",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_GRANITE_CAVE_B2F_REPEL"
     },
@@ -36,7 +36,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_RARE_CANDY",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_SPIKES",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY"
     },
@@ -184,7 +184,7 @@
       "x": 15,
       "y": 11,
       "elevation": 3,
-      "item": "ITEM_EVERSTONE",
+      "item": "ITEM_EVIOLITE",
       "flag": "FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_2"
     }
   ]
