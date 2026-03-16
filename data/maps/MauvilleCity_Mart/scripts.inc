@@ -19,7 +19,7 @@ MauvilleCity_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
-	.2byte ITEM_XP_CANDY_XL
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 MauvilleCity_Mart_EventScript_ExpertM::

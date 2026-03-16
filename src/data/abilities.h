@@ -2457,7 +2457,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     },
     [ABILITY_DIMENSION_TWISTER] =
     {
-        .name = _("Dimension Twister"),
+        .name = _("Dimension Twist"),
         .description = COMPOUND_STRING("Twists dimensions on entry."),
         .aiRating = 8,
     },

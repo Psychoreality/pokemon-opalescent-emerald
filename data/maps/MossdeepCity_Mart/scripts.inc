@@ -20,7 +20,7 @@ MossdeepCity_Mart_Pokemart:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_XP_CANDY_XL
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 MossdeepCity_Mart_EventScript_Woman::

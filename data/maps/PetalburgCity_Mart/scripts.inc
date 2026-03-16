@@ -21,7 +21,7 @@ PetalburgCity_Mart_Pokemart_Basic:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
-	.2byte ITEM_XP_CANDY_XL
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_ExpandedItems::
@@ -41,7 +41,7 @@ PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
-	.2byte ITEM_XP_CANDY_XL
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_Woman::

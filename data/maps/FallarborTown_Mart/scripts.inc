@@ -19,7 +19,7 @@ FallarborTown_Mart_Pokemart:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_XP_CANDY_XL
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 FallarborTown_Mart_EventScript_Woman::
