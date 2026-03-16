@@ -2455,4 +2455,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
         .breakable = TRUE,
     },
+    [ABILITY_DIMENSION_TWISTER] =
+    {
+        .name = _("Dimension Twister"),
+        .description = COMPOUND_STRING("Twists dimensions on entry."),
+        .aiRating = 8,
+    },
 };

@@ -4379,6 +4379,13 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                 effect++;
             }
             break;
+        case ABILITY_DIMENSION_TWISTER:
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_TRICK_ROOM))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_DimensionTwisterActivates);
+                effect++;
+            }
+            break;
         case ABILITY_INTIMIDATE:
             if (!gSpecialStatuses[battler].switchInAbilityDone && !IsOpposingSideEmpty(battler))
             {
@@ -8192,7 +8199,7 @@ static inline uq4_12_t GetTargetDamageModifier(struct DamageContext *ctx)
         else if (GetMoveTargetCount(ctx) >= 3)
             return B_MULTIPLE_TARGETS_DMG >= GEN_4 ? UQ_4_12(0.75) : UQ_4_12(1.0);
 	}
-    return (ctx->abilityAtk == ABILITY_GENERALIST) ? UQ_4_12(1.2) : UQ_4_12(1.0);
+    return UQ_4_12(1.0);
 }
 
 static inline uq4_12_t GetParentalBondModifier(u32 battlerAtk)
@@ -8209,7 +8216,7 @@ static inline uq4_12_t GetSameTypeAttackBonusModifier(struct DamageContext *ctx)
     else if (gBattleStruct->pledgeMove && IS_BATTLER_OF_TYPE(BATTLE_PARTNER(ctx->battlerAtk), ctx->moveType))
         return (ctx->abilityAtk == ABILITY_ADAPTABILITY) ? UQ_4_12(2.0) : UQ_4_12(1.5);
     else if (!IS_BATTLER_OF_TYPE(ctx->battlerAtk, ctx->moveType) || ctx->move == MOVE_STRUGGLE || ctx->move == MOVE_NONE)
-        return UQ_4_12(1.0);
+        return (ctx->abilityAtk == ABILITY_GENERALIST) ? UQ_4_12(1.2) : UQ_4_12(1.0);
     return (ctx->abilityAtk == ABILITY_ADAPTABILITY) ? UQ_4_12(2.0) : UQ_4_12(1.5);
 }
 

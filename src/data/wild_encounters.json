@@ -3947,6 +3947,71 @@
                 "species": "SPECIES_WAILMER"
               }
             ]
+          },
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_HONCHKROW"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_MISMAGIUS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_MAROWAK_ALOLA"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_WYRDEER"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_DUSCLOPS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_KINGAMBIT"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_KINGAMBIT"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_DRAGAPULT"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_KINGAMBIT"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_DRAGAPULT"
+              }
+            ]
           }
         },
         {
