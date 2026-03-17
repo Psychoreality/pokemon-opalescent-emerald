@@ -340,12 +340,12 @@ LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
 	.string "Don't be shy about taking it!$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
-	.string "That TM contains Overheat.\p"
+	.string "That TM contains Heat Crash.\p"
 	.string "It inflicts serious damage on\n"
 	.string "the opponent.\p"
-	.string "But it also sharply cuts the Sp. Atk\n"
-	.string "of the Pokémon using it. It might not\l"
-	.string "be suitable for longer battles.$"
+	.string "But only the heaviest Pokémon can\n"
+	.string "make the best use of it! So be\l"
+	.string "cautious with how you use it.$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery:
 	.string "Registered Gym Leader Flannery\n"

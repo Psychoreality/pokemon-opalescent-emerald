@@ -177,7 +177,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "Route119_EventScript_Yasu",
       "flag": "0"
     },
@@ -196,10 +196,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 10,
-      "y": 50,
+      "x": 18,
+      "y": 44,
       "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -243,7 +243,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_SUPER_REPEL",
+      "trainer_sight_or_berry_tree_id": "ITEM_TERRAIN_EXTENDER",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_SUPER_REPEL"
     },
@@ -256,7 +256,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ZINC",
+      "trainer_sight_or_berry_tree_id": "ITEM_BLACK_AUGURITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_ZINC"
     },
@@ -282,7 +282,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_LEAF_STONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_CHOICE_SPECS",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_LEAF_STONE"
     },
@@ -308,7 +308,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_HYPER_POTION",
+      "trainer_sight_or_berry_tree_id": "ITEM_COVERT_CLOAK",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_HYPER_POTION_1"
     },
@@ -439,7 +439,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_HYPER_POTION",
+      "trainer_sight_or_berry_tree_id": "ITEM_ABILITY_SHIELD",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_HYPER_POTION_2"
     },
@@ -458,7 +458,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 29,
+      "x": 34,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
@@ -523,10 +523,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 16,
-      "y": 52,
+      "x": 23,
+      "y": 49,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -549,14 +549,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 19,
-      "y": 5,
+      "x": 31,
+      "y": 34,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_NUGGET",
+      "trainer_sight_or_berry_tree_id": "ITEM_CHOICE_BAND",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_NUGGET"
     },
@@ -569,7 +569,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEAVY_DUTY_BOOTS",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_ELIXIR_2"
     },
@@ -789,62 +789,6 @@
       "script": "Route119_EventScript_RouteSignFortree"
     },
     {
-      "type": "secret_base",
-      "x": 5,
-      "y": 2,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_SHRUB1_1"
-    },
-    {
-      "type": "secret_base",
-      "x": 4,
-      "y": 89,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_SHRUB1_2"
-    },
-    {
-      "type": "secret_base",
-      "x": 5,
-      "y": 15,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_SHRUB2_1"
-    },
-    {
-      "type": "secret_base",
-      "x": 7,
-      "y": 101,
-      "elevation": 3,
-      "secret_base_id": "SECRET_BASE_SHRUB2_2"
-    },
-    {
-      "type": "secret_base",
-      "x": 34,
-      "y": 24,
-      "elevation": 3,
-      "secret_base_id": "SECRET_BASE_SHRUB3_1"
-    },
-    {
-      "type": "secret_base",
-      "x": 31,
-      "y": 73,
-      "elevation": 3,
-      "secret_base_id": "SECRET_BASE_SHRUB4_1"
-    },
-    {
-      "type": "secret_base",
-      "x": 16,
-      "y": 81,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_BLUE_CAVE3_3"
-    },
-    {
-      "type": "secret_base",
-      "x": 16,
-      "y": 28,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_BLUE_CAVE4_3"
-    },
-    {
       "type": "hidden_item",
       "x": 17,
       "y": 82,
@@ -880,20 +824,6 @@
       "y": 76,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_TREE4_3"
-    },
-    {
-      "type": "secret_base",
-      "x": 4,
-      "y": 15,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_SHRUB3_3"
-    },
-    {
-      "type": "secret_base",
-      "x": 6,
-      "y": 2,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_SHRUB4_3"
     },
     {
       "type": "hidden_item",

@@ -246,14 +246,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 39,
-      "y": 15,
+      "x": 42,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route118_EventScript_Barny",
       "flag": "0"
     },
@@ -293,7 +293,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_HYPER_POTION",
+      "trainer_sight_or_berry_tree_id": "ITEM_CLEAR_AMULET",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_118_HYPER_POTION"
     },
@@ -358,13 +358,6 @@
   ],
   "bg_events": [
     {
-      "type": "secret_base",
-      "x": 47,
-      "y": 14,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_RED_CAVE1_1"
-    },
-    {
       "type": "sign",
       "x": 13,
       "y": 6,
@@ -379,34 +372,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route118_EventScript_RouteSign119"
-    },
-    {
-      "type": "secret_base",
-      "x": 67,
-      "y": 6,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_RED_CAVE2_1"
-    },
-    {
-      "type": "secret_base",
-      "x": 29,
-      "y": 5,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_YELLOW_CAVE1_2"
-    },
-    {
-      "type": "secret_base",
-      "x": 47,
-      "y": 5,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_TREE1_3"
-    },
-    {
-      "type": "secret_base",
-      "x": 46,
-      "y": 5,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_TREE2_1"
     },
     {
       "type": "hidden_item",
