@@ -8949,5 +8949,5 @@ BattleScript_DimensionTwisterActivates::
 	printstring STRINGID_DIMENSIONSWERETWISTED
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
-	call BattleScript_EffectTrickRoom
+	twistdimensions
 	end3

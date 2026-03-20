@@ -570,7 +570,7 @@ static void Cmd_trysetsnatch(void);
 static void Cmd_unused2(void);
 static void Cmd_switchoutabilities(void);
 static void Cmd_jumpifhasnohp(void);
-static void Cmd_unused_0xE4(void);
+static void Cmd_twistdimensions(void);
 static void Cmd_pickup(void);
 static void Cmd_unused_0xE6(void);
 static void Cmd_unused_0xE7(void);
@@ -829,7 +829,7 @@ void (*const gBattleScriptingCommandsTable[])(void) =
     [B_SCR_OP_UNUSED2] = Cmd_unused2,
     [B_SCR_OP_SWITCHOUTABILITIES] = Cmd_switchoutabilities,
     [B_SCR_OP_JUMPIFHASNOHP] = Cmd_jumpifhasnohp,
-    [B_SCR_OP_UNUSED_0xE4] = Cmd_unused_0xE4,
+    [B_SCR_OP_TWISTDIMENSIONS] = Cmd_twistdimensions,
     [B_SCR_OP_PICKUP] = Cmd_pickup,
     [B_SCR_OP_UNUSED_0xE6] = Cmd_unused_0xE6,
     [B_SCR_OP_UNUSED_0xE7] = Cmd_unused_0xE7,
@@ -13206,8 +13206,14 @@ static void Cmd_jumpifhasnohp(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_unused_0xE4(void)
+static void Cmd_twistdimensions(void)
 {
+
+    CMD_ARGS();
+
+    HandleRoomMove(STATUS_FIELD_TRICK_ROOM, &gFieldTimers.trickRoomTimer, 0);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+
 }
 
 static void Cmd_pickup(void)

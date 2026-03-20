@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/FrozenBreach/border.bin",
       "blockdata_filepath": "data/layouts/FrozenBreach/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAGE_TOWER_B1F",
+      "name": "MirageTower_B1F_Layout",
+      "width": 25,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/MirageTower_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/MirageTower_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAGE_TOWER_B2F",
+      "name": "MirageTower_B2F_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/MirageTower_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/MirageTower_B2F/map.bin"
     }
   ]
 }

@@ -2444,7 +2444,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GENERALIST] =
     {
         .name = _("Generalist"),
-        .description = COMPOUND_STRING("Boosts different type attacks."),
+        .description = COMPOUND_STRING("Boosts other type attacks."),
         .aiRating = 6,
     },
 
@@ -2460,5 +2460,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Dimension Twist"),
         .description = COMPOUND_STRING("Twists dimensions on entry."),
         .aiRating = 8,
+    },
+    [ABILITY_PACK_TACTICS] =
+    {
+        .name = _("Pack Tactics"),
+        .description = COMPOUND_STRING("Damage up in double battles."),
+        .aiRating = 6,
     },
 };

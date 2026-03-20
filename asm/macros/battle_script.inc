@@ -1226,8 +1226,8 @@
 	.4byte \jumpInstr
 	.endm
 
-	.macro unused_0xE4
-	.byte 0xe4
+	.macro twistdimensions
+	.byte B_SCR_OP_TWISTDIMENSIONS
 	.endm
 
 	.macro pickup

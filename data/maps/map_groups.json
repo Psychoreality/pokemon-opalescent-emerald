@@ -430,7 +430,9 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "FrozenBreach"
+    "FrozenBreach",
+    "MirageTower_B1F",
+    "MirageTower_B2F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -1165,3 +1165,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/apricorn_tree.inc"
 
 	.include "data/maps/FrozenBreach/scripts.inc"
+
+	.include "data/maps/MirageTower_B1F/scripts.inc"
+
+	.include "data/maps/MirageTower_B2F/scripts.inc"
