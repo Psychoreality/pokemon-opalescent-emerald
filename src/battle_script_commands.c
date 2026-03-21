@@ -2936,6 +2936,27 @@ static inline bool32 TrySetLightScreen(u32 battler)
     return FALSE;
 }
 
+static inline bool32 TrySetAuroraVeil(u32 battler)
+{
+    u32 side = GetBattlerSide(battler);
+    if (!(gSideStatuses[side] & SIDE_STATUS_AURORA_VEIL && gBattleWeather & B_WEATHER_ICY_ANY))
+    {
+        gSideStatuses[side] |= SIDE_STATUS_AURORA_VEIL;
+        if (GetBattlerHoldEffect(battler) == HOLD_EFFECT_LIGHT_CLAY)
+            gSideTimers[side].auroraVeilTimer = 8;
+        else
+            gSideTimers[side].auroraVeilTimer = 5;
+
+        if (IsDoubleBattle() && CountAliveMonsInBattle(BATTLE_ALIVE_SIDE, battler) == 2)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_SAFEGUARD;
+        else
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_SAFEGUARD;
+
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static void SetNonVolatileStatus(u32 effectBattler, enum MoveEffect effect, const u8 *battleScript, enum StatusTrigger trigger)
 {
     gEffectBattler = effectBattler;

@@ -4283,6 +4283,14 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                 effect++;
             }
             break;
+        case ABILITY_REFRACTION:
+            if (!gSpecialStatuses[battler].switchInAbilityDone && TrySetAuroraVeil(battler))
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                effect++;
+            }
+            break;
         case ABILITY_SCREEN_CLEANER:
             if (!gSpecialStatuses[battler].switchInAbilityDone && TryRemoveScreens(battler))
             {

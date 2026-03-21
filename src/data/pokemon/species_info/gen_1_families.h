@@ -10905,7 +10905,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sFarfetchdLevelUpLearnset,
         .teachableLearnset = sFarfetchdTeachableLearnset,
         .eggMoveLearnset = sFarfetchdEggMoveLearnset,
-        .evolutions = ({EVO_ITEM, ITEM_LEEK, SPECIES_SIRFETCHD})
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEEK, SPECIES_SIRFETCHD})
     },
 
 #if P_GALARIAN_FORMS

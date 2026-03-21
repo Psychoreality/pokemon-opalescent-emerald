@@ -2467,4 +2467,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Damage up in double battles."),
         .aiRating = 6,
     },
+    [ABILITY_REFRACTION] =
+    {
+        .name = _("Refraction"),
+        .description = COMPOUND_STRING("Creates a veil in snow."),
+        .aiRating = 6,
+    },
 };

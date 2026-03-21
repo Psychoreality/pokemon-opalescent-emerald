@@ -20,11 +20,11 @@
 #define P_NEW_EVOS_IN_REGIONAL_DEX       TRUE
 
 // Battle gimmick specific Forms.
-#define P_MEGA_EVOLUTIONS                TRUE
-#define P_PRIMAL_REVERSIONS              TRUE // Groudon and Kyogre only.
+#define P_MEGA_EVOLUTIONS                FALSE
+#define P_PRIMAL_REVERSIONS              FALSE // Groudon and Kyogre only.
 #define P_ULTRA_BURST_FORMS              FALSE // Ultra Necrozma only.
 #define P_GIGANTAMAX_FORMS               FALSE
-#define P_TERA_FORMS                     TRUE
+#define P_TERA_FORMS                     FALSE
 
 #define P_GEN_9_MEGA_EVOLUTIONS          P_MEGA_EVOLUTIONS // Mega Evolutions introduced in Z-A and its DLC
 
@@ -39,7 +39,7 @@
 #define P_PALDEAN_FORMS                  P_REGIONAL_FORMS
 
 // Big groups of forms that aren't always desired when choosing families.
-#define P_PIKACHU_EXTRA_FORMS            TRUE
+#define P_PIKACHU_EXTRA_FORMS            FALSE
 #define P_COSPLAY_PIKACHU_FORMS          P_PIKACHU_EXTRA_FORMS
 #define P_CAP_PIKACHU_FORMS              P_PIKACHU_EXTRA_FORMS
 
@@ -88,7 +88,7 @@
 #define P_FAMILY_PONYTA                  FALSE
 #define P_FAMILY_SLOWPOKE                P_GEN_1_POKEMON
 #define P_FAMILY_MAGNEMITE               P_GEN_1_POKEMON
-#define P_FAMILY_FARFETCHD               FALSE
+#define P_FAMILY_FARFETCHD               P_GEN_1_POKEMON
 #define P_FAMILY_DODUO                   P_GEN_1_POKEMON
 #define P_FAMILY_SEEL                    FALSE
 #define P_FAMILY_GRIMER                  P_GEN_1_POKEMON
