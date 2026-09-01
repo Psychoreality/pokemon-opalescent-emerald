@@ -6232,7 +6232,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Iron Tail"),
         .description = COMPOUND_STRING(
-            "Attacks with a rock-hard\n"
+            "Attacks with a steely\n"
             "tail. May lower Defense."),
         .effect = EFFECT_HIT,
         .power = 100,
@@ -11278,17 +11278,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Mirror Shot"),
         .description = COMPOUND_STRING(
             "Emits a flash of energy to\n"
-            "damage and cut accuracy."),
+            "damage. May flinch foes."),
         .effect = EFFECT_HIT,
-        .power = 65,
+        .power = 70,
         .type = TYPE_STEEL,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
+            .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 30,
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
@@ -11305,7 +11305,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Releases a blast of light\n"
             "that may lower Sp. Def."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 90,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 10,
@@ -11332,8 +11332,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "confuse the foe."),
         .effect = EFFECT_HIT,
         .power = 90,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -11582,16 +11582,16 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Shoots filthy garbage at\n"
             "the foe. May also poison."),
         .effect = EFFECT_HIT,
-        .power = 120,
+        .power = 130,
         .type = TYPE_POISON,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 70,
+        .accuracy = 90,
         .pp = 5,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_TOXIC,
-            .chance = 10,
+            .moveEffect = MOVE_EFFECT_ATK_MINUS_2,
+            .self = TRUE,
         }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_TOUGH : CONTEST_CATEGORY_COOL,
@@ -11639,7 +11639,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .ballisticMove = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -13672,7 +13672,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Wild Charge"),
         .description = COMPOUND_STRING(
             "An electrical tackle that\n"
-            "also hurts the user."),
+            "may paralyse foes."),
         .effect = EFFECT_RECOIL,
         .power = 90,
         .type = TYPE_ELECTRIC,
@@ -13681,7 +13681,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = { .recoilPercentage = 25 },
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 10,
+        }),
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -14004,7 +14007,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps the foe in a fierce\n"
             "wind. May cause confusion."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
+        .power = 120,
         .type = TYPE_FLYING,
         .accuracy = 70,
         .pp = 10,
@@ -14157,15 +14160,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Secret Sword"),
         .description = COMPOUND_STRING(
             "Cuts with a long horn that\n"
-            "does physical damage."),
-        .effect = EFFECT_PSYSHOCK,
+            "does special damage."),
+        .effect = EFFECT_SECRET_SWORD,
         .power = 85,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
         .slicingMove = TRUE,
         .metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
@@ -14728,7 +14731,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Damages adjacent Pokémon\n"
             "and heals up by half of it."),
         .effect = EFFECT_ABSORB,
-        .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 65 : 50,
+        .power = 75,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 20,
@@ -15244,17 +15247,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_ROCK,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 5,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .metronomeBanned = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = B_UPDATED_MOVE_DATA >= GEN_7 ? MOVE_EFFECT_DEF_PLUS_2:  MOVE_EFFECT_DEF_PLUS_1,
-            .self = TRUE,
-            .chance = 50,
-        }),
         .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED, //CONTEST_EFFECT_EXCITES_AUDIENCE_MORE_IF_LAST
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -20922,17 +20920,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Blood Moon"),
         .description = COMPOUND_STRING(
-            "Unleashes the blood moon.\n"
-            "Can't be used twice in a row."),
+            "Unleashes the blood moon\n"
+            "in a pulse of energy."),
         .effect = EFFECT_HIT,
-        .power = 140,
-        .type = TYPE_NORMAL,
+        .power = 120,
+        .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 5,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .cantUseTwice = TRUE,
+        .pulseMove = TRUE,
         .battleAnimScript = gBattleAnimMove_BloodMoon,
     },
 
@@ -20945,7 +20943,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_ABSORB,
         .power = 80,
         .type = TYPE_GRASS,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,

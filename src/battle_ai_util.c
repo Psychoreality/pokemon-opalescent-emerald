@@ -478,6 +478,8 @@ bool32 AI_CanBattlerEscape(u32 battler)
         return TRUE;
     if (holdEffect == HOLD_EFFECT_SHED_SHELL)
         return TRUE;
+    if (gBattleMons[battler].ability == ABILITY_RUN_AWAY)
+        return TRUE;
 
     return FALSE;
 }

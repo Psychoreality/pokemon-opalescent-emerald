@@ -4284,8 +4284,14 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
             }
             break;
         case ABILITY_REFRACTION:
-            if (!gSpecialStatuses[battler].switchInAbilityDone && TrySetAuroraVeil(battler))
+            if (!gSpecialStatuses[battler].switchInAbilityDone && !(gSideStatuses[GetBattlerSide(gBattlerAttacker)] & SIDE_STATUS_AURORA_VEIL))
             {
+                gSideStatuses[GetBattlerSide(gBattlerAttacker)] |= SIDE_STATUS_AURORA_VEIL;
+                if (GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_LIGHT_CLAY)
+                    gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer = 8;
+                else
+                    gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer = 5;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_SAFEGUARD;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
                 effect++;
@@ -5448,6 +5454,21 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                 effect++;
             }
             break;
+        case ABILITY_ETERNAL_FLAME:
+            if (IsBattlerAlive(gBattlerTarget)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && CanBeBurned(gBattlerAttacker, gBattlerTarget, gLastUsedAbility)
+             && IsBattlerTurnDamaged(gBattlerTarget) // Need to actually hit the target
+             && RandomPercentage(RNG_POISON_TOUCH, 30))
+            {
+                gEffectBattler = gBattlerTarget;
+                gBattleScripting.battler = gBattlerAttacker;
+                gBattleScripting.moveEffect = MOVE_EFFECT_BURN;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                BattleScriptCall(BattleScript_AbilityStatusEffect);
+                effect++;
+            }
+            break;
         case ABILITY_SHREDDER:
             if (IsBattlerAlive(gBattlerTarget)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -5918,6 +5939,8 @@ bool32 CanBattlerEscape(u32 battler) // no ability check
     if (gBattleStruct->battlerState[battler].commanderSpecies != SPECIES_NONE)
         return FALSE;
     else if (GetConfig(CONFIG_GHOSTS_ESCAPE) >= GEN_6 && IS_BATTLER_OF_TYPE(battler, TYPE_GHOST))
+        return TRUE;
+    else if (gBattleMons[battler].ability == ABILITY_RUN_AWAY)
         return TRUE;
     else if (gBattleMons[battler].volatiles.escapePrevention)
         return FALSE;
@@ -8023,7 +8046,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
     def = gBattleMons[battlerDef].defense;
     spDef = gBattleMons[battlerDef].spDefense;
 
-    if (moveEffect == EFFECT_PSYSHOCK || IsBattleMovePhysical(move)) // uses defense stat instead of sp.def
+    if (moveEffect == EFFECT_PSYSHOCK || (IsBattleMovePhysical(move) && moveEffect != EFFECT_SECRET_SWORD)) // uses defense stat instead of sp.def
     {
         if (gFieldStatuses & STATUS_FIELD_WONDER_ROOM) // the defense stats are swapped
         {
@@ -8037,7 +8060,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
         }
         defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
     }
-    else // is special
+    else // uses sp.def stat instead of def
     {
         if (gFieldStatuses & STATUS_FIELD_WONDER_ROOM) // the defense stats are swapped
         {

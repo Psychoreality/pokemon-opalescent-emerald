@@ -2473,4 +2473,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Creates a veil in snow."),
         .aiRating = 6,
     },
+    [ABILITY_ETERNAL_FLAME] =
+    {
+        .name = _("Eternal Flame"),
+        .description = COMPOUND_STRING("All moves can burn."),
+        .aiRating = 4,
+    },
 };

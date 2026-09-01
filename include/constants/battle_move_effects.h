@@ -196,6 +196,7 @@ enum __attribute__((packed)) BattleMoveEffects
     EFFECT_RETALIATE,
     EFFECT_FOUL_PLAY,
     EFFECT_PSYSHOCK,
+    EFFECT_SECRET_SWORD,
     EFFECT_ROOST,
     EFFECT_GRAVITY,
     EFFECT_MIRACLE_EYE,
