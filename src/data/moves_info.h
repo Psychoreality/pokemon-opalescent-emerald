@@ -1843,7 +1843,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_RECOIL,
         .power = 80,
         .type = TYPE_FIGHTING,
-        .accuracy = 80,
+        .accuracy = 100,
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 25,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
