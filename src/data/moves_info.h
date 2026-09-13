@@ -6100,7 +6100,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .accuracy = 0,
         .pp = 40,
         .target = MOVE_TARGET_USER,
-        .priority = 0,
+        .priority = -6,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_RESET_STATS },
         .ignoresProtect = TRUE,
@@ -10710,7 +10710,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Generates a shock wave to\n"
             "damage the foe."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 85 : 90,
+        .power = 90,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 10,
@@ -11499,8 +11499,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Power Whip"),
         .description = COMPOUND_STRING(
-            "Violently lashes the foe\n"
-            "with vines or tentacles."),
+            "Violently lashes the foe.\n"
+            "Cuts user's Atk and Def."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_GRASS,
@@ -19338,7 +19338,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Stone Axe"),
         .description = COMPOUND_STRING(
             "High critical hit ratio. Sets\n"
-            "Splinters that hurt the foe."),
+            "stones that hurt the foe."),
         .effect = EFFECT_STONE_AXE,
         .power = 65,
         .type = TYPE_ROCK,

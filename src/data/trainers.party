@@ -232,7 +232,20 @@ Double Battle: No
 AI: Check Bad Move
 
 Poochyena
-Level: 9
+Ability: Strong Jaw
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha @ Sitrus Berry
+Ability: Strong Jaw
+Level: 12
+Nature: Jolly
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sandshrew-Alola
+Ability: Permafrost
+Level: 11
+Nature: Relaxed
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARCEL ===
@@ -2123,9 +2136,16 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
-Level: 7
+Cleffa @ Sitrus Berry
+Ability: Emergency Exit
+Level: 10
+Nature: Bold
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Igglybuff @ Sitrus Berry
+Ability: Cute Charm
+Level: 10
+Nature: Calm
 
 === TRAINER_DAPHNE ===
 Name: Daphne
@@ -2527,8 +2547,16 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
-Level: 7
+Patrat @ Sitrus Berry
+Ability: Analytic
+Level: 12
+Nature: Timid
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sentret @ Sitrus Berry
+Ability: Fur Coat
+Level: 12
+Nature: Jolly
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MOLLIE ===
@@ -4796,31 +4824,111 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Assume Stab / Basic Trainer / Force Setup First Turn / Hp Aware / Pp Stall Prevention / Predict Switch / Prefer Highest Damage Move / Try To 2Hko
 
-Geodude
-Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
-
-Geodude
-Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
-
-Nosepass @ Oran Berry
+Glimmet
+Ability: Toxic Debris
 Level: 15
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Toxic
+- Venoshock
+- Rock Tomb
+
+Archen
+Ability: Emergency Exit
+Level: 15
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aerial Ace
+- Rock Tomb
+
+Shieldon
+Ability: Tablets Of Ruin
+Level: 15
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Tomb
+- Iron Defense
+
+Lileep
+Ability: Water Absorb
+Level: 15
+Nature: Sassy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Tomb
+- Grass Knot
+
+=== TRAINER_ROXANNE_1 ===
+Name: Roxanne
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Assume Stab / Basic Trainer / Force Setup First Turn / Hp Aware / Pp Stall Prevention / Predict Switch / Prefer Highest Damage Move / Try To 2Hko / Smart Switching
+Difficulty: Challenge
+
+Glimmet
+Ability: Toxic Debris
+Level: 15
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Toxic
+- Acid Spray
+- Ancient Power
+
+Corsola-Galar
+Ability: Cursed Body
+Level: 15
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Astonish
+- Rock Tomb
 - Block
 - Harden
-- Tackle
+
+Cranidos
+Ability: Rock Head
+Level: 15
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Take Down
 - Rock Tomb
+- Trailblaze
+- Curse
+
+Shieldon
+Ability: Tablets Of Ruin
+Level: 15
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Metal Sound
+- Ancient Power
+- Iron Defense
+- Mud Shot
+
+Anorith
+Ability: Hyper Cutter
+Level: 15
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fell Stinger
+- Rock Tomb
+- Fury Swipes
+- Bug Bite
+
+Lileep
+Ability: Water Absorb
+Level: 15
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ancient Power
+- Mega Drain
+- Sludge
+- Ingrain
 
 === TRAINER_BRAWLY_1 ===
 Name: Brawly
@@ -5949,8 +6057,25 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 5
+Poochyena (M)
+Ability: Strong Jaw
+Level: 6
+Shiny: No
+Nature: Naive
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zigzagoon (M)
+Ability: Steadfast
+Level: 6
+Shiny: No
+Nature: Lonely
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Teddiursa (M) @ Cheri Berry
+Ability: Pickup
+Level: 6
+Shiny: No
+Nature: Naughty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BILLY ===
@@ -5962,12 +6087,28 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 5
+Lillipup
+Ability: Vital Spirit
+Level: 8
+Nature: Brave
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Seedot
-Level: 7
+Ability: Pickpocket
+Level: 8
+Nature: Relaxed
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Taillow
+Ability: Guts
+Level: 8
+Nature: Hasty
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Yamper
+Ability: Static
+Level: 8
+Nature: Jolly
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH ===
@@ -5979,10 +6120,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 10
+Geodude-Alola
+Ability: Electromorphosis
+Level: 14
+Nature: Impish
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+
+Rhyhorn
+Ability: Solid Rock
+Level: 14
+Nature: Jolly
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TOMMY ===
 Name: Tommy
@@ -5993,12 +6141,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
+Onix
+Ability: Solid Rock
+Level: 14
+Nature: Brave
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-Geodude
-Level: 8
+Nosepass
+Ability: Sturdy
+Level: 14
+Nature: Impish
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 === TRAINER_JOEY ===
@@ -6215,12 +6367,22 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
+Starly
+Ability: Keen Eye
+Level: 5
+Nature: Naughty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Taillow
-Level: 3
+Wingull
+Ability: Drizzle
+Level: 5
+Nature: Bold
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lotad
+Ability: Rain Dish
+Level: 6
+Nature: Modest
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
@@ -6330,15 +6492,9 @@ Double Battle: No
 AI: Check Bad Move
 
 Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magikarp
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magikarp
-Level: 7
+Ability: Scrappy
+Level: 15
+Nature: Hasty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLAUDE ===
@@ -8807,11 +8963,27 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Seedot
-Level: 6
+Ability: Chlorophyll
+Level: 13
+Nature: Brave
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lotad
-Level: 6
+Ability: Swift Swim
+Level: 13
+Nature: Rash
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Impidimp
+Ability: Prankster
+Level: 13
+Nature: Impish
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Hatenna
+Ability: Magic Guard
+Level: 13
+Nature: Modest
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIU_AND_YUKI ===
@@ -9510,8 +9682,10 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Chikorita
+Ability: Triage
 Level: 5
+Nature: Quiet
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
@@ -9563,10 +9737,12 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
+AI: Check Bad Move / Force Setup First Turn / Try To Faint
 
-Torchic
+Cyndaquil
+Ability: Flash Fire
 Level: 5
+Nature: Quiet
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
@@ -9620,8 +9796,10 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Totodile
+Ability: Strong Jaw
 Level: 5
+Nature: Naughty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
@@ -9675,8 +9853,10 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Chikorita
+Ability: Triage
 Level: 5
+Nature: Quiet
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
@@ -9730,8 +9910,10 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torchic
+Cyndaquil
+Ability: Flash Fire
 Level: 5
+Nature: Quiet
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TREECKO ===
@@ -9785,8 +9967,10 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Totodile
+Ability: Strong Jaw
 Level: 5
+Nature: Naughty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
@@ -10560,12 +10744,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
+Roggenrola
+Ability: Purifying Salt
+Level: 14
+Nature: Impish
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Geodude
-Level: 8
+Ability: Sturdy
+Level: 14
+Nature: Relaxed
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_BRENDEN ===
@@ -11054,11 +11242,27 @@ Double Battle: No
 AI: Check Bad Move
 
 Zigzagoon
-Level: 4
+Ability: Fur Coat
+Level: 7
+Nature: Hasty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Shroomish
-Level: 4
+Ability: Effect Spore
+Level: 7
+Nature: Impish
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Litleo
+Ability: Flash Fire
+Level: 7
+Nature: Mild
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gothita
+Ability: Competitive
+Level: 7
+Nature: Bold
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_1 ===
@@ -11071,11 +11275,21 @@ Double Battle: No
 AI: Check Bad Move
 
 Lotad
-Level: 6
+Ability: Dancer
+Level: 12
+Nature: Hasty
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shroomish
-Level: 6
+Morelull
+Ability: Mycelium Might
+Level: 12
+Nature: Calm
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Budew
+Ability: Toxic Debris
+Level: 12
+Nature: Naive
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JANICE ===
@@ -11258,11 +11472,21 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 4
+Ability: Suction Cups
+Level: 6
+Nature: Relaxed
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
-Level: 4
+Surskit
+Ability: Water Veil
+Level: 6
+Nature: Naive
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Grubbin
+Ability: Swarm
+Level: 6
+Nature: Modest
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYLE ===
@@ -11275,19 +11499,23 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 3
+Ability: Suction Cups
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Ability: Suction Cups
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Ability: Suction Cups
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Ability: Suction Cups
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSE ===
@@ -11364,11 +11592,27 @@ Double Battle: No
 AI: Check Bad Move
 
 Nincada
-Level: 6
+Ability: Hyper Cutter
+Level: 12
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Nincada
-Level: 6
+Kricketot
+Ability: Savvy
+Level: 12
+Nature: Modest
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Caterpie
+Ability: Gooey
+Level: 12
+Nature: Bold
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Weedle
+Ability: Poison Point
+Level: 12
+Nature: Lonely
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_2 ===
@@ -12977,6 +13221,12 @@ Double Battle: No
 AI: Check Bad Move
 
 Magikarp
+Ability: Scrappy
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Ability: Scrappy
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

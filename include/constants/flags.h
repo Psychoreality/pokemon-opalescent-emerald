@@ -1223,13 +1223,13 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 #define FLAG_ITEM_OLDALETOWN_TM107                                  0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
+#define FLAG_ITEM_ROUTE110_SUBSTITUTE                               0x494 // Unused Flag
 #define FLAG_ITEM_NEWMAUV_CHOICE_SCARF                              0x495 // Unused Flag
 #define FLAG_ITEM_ROUTE104_SCALD                                    0x496 // Unused Flag
 #define FLAG_ITEM_ROUTE122_METEORMASH                               0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_FROZENBREACH_ICICLESPEAR                          0x498 // Unused Flag
+#define FLAG_ITEM_CAVEOFORIGIN_HIGHHORSEPOWER                       0x499 // Unused Flag
+#define FLAG_ITEM_CAVEOFORIGIN_HYDROPUMP                            0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
